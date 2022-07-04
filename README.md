@@ -6,7 +6,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
 
-<u> 下划线</u>
+`<u>` 下划线 `</u>`
 
 # 一级标题
 
@@ -798,9 +798,7 @@ defer //也允许异步加载script文件
   ```
 
 - delete obj.name 删除对象 name 属性
-
 - Object.hasOwnProperty() 判断对象是否包含特定的自身（非继承）属性
-
 -
 
 ## 探索 js 中函数的秘密
@@ -829,7 +827,6 @@ defer //也允许异步加载script文件
 ![](https://s3.bmp.ovh/imgs/2022/06/06/133fc2da11344f4f.png)
 
 - 基本(原始)类型存在栈内存中，栈 stack 为自动分配的内存空间，它由系统自动释放；
-
 - 引用类型存在堆内存中， 堆 heap 是动态分配的内存，大小不定也不会自动释放。
 
 ## 立即执行 a 函数
@@ -842,7 +839,6 @@ defer //也允许异步加载script文件
 ## 防抖和节流
 
 - debounce ：只执行最后一次
-
 - throttle ：控制执行次数
 
 ## 客户端渲染和服务端渲染
@@ -864,10 +860,8 @@ Vue.js构建的应用程序，默认情况下是有一个html模板页，然后�
 
 ## 原型对象
 
-- 每个对象都有其原型对象`__proto__`
-
+- 每个对象都有其原型对象 `__proto__`
 - 构造函数 prototype 属性
-
 - 基于原型的继承
 
   ```js
@@ -896,7 +890,7 @@ Vue.js构建的应用程序，默认情况下是有一个html模板页，然后�
 
 ## 类class
 
-​```js
+```js
 class Cat{
 
     constructor(name.age){
@@ -1684,6 +1678,13 @@ Cesium.sampleTerrain(terrainProvider, level, positions)
 ```js
 1.https://backlog.com/git-tutorial/cn/intro/intro1_2.html
 2.https://blog.csdn.net/u011966339/article/details/106250920
+```
+
+## Git 的高级使用
+
+```js
+js
+1
 ```
 
 # 软知识
