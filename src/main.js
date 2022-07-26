@@ -21,13 +21,22 @@
 
 import { createApp } from 'vue'
 import App from './App.vue'
+// 使用了全局组件自动注入
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
-import 'virtual:windi.css' // *引入windicss
+
+import 'virtual:windi.css' // *引入windics
+
+import 'virtual:svg-icons-register' // 引入 svg-icons-register插件
 
 import router from './router'
+
+// 路由拦截器
 import './permission' // permission.js
+
+// 引入pinia
 import { createPinia } from 'pinia'
+// pinia插件
 import piniaPluginPersist from 'pinia-plugin-persist'
 // 创建pinia实例
 const pinia = createPinia()
@@ -35,12 +44,10 @@ pinia.use(piniaPluginPersist)
 const app = createApp(App)
 
 app.use(pinia)
-app.use(ElementPlus)
 app.use(router)
-
+app.use(ElementPlus)
 // 如果您正在使用CDN引入，请删除下面一行。
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }

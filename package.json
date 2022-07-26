@@ -9,9 +9,11 @@
   },
   "dependencies": {
     "element-plus": "^2.2.5",
+    "mitt": "^3.0.0",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.14",
     "pinia-plugin-persist": "^1.0.0",
+    "popmotion": "^9.3.5",
     "three": "^0.141.0",
     "vue": "^3.2.25",
     "vue-router": "^4.0.13"
@@ -19,12 +21,20 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
     "babel-plugin-component": "^1.1.1",
+    "consola": "^2.15.3",
     "node-sass": "^4.14.1",
     "rollup-plugin-visualizer": "^5.6.0",
     "sass": "^1.49.5",
     "sass-loader": "^7.3.1",
+    "unplugin-auto-import": "^0.10.0",
+    "unplugin-vue-components": "^0.21.1",
     "vite": "^2.9.9",
     "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-restart": "^0.2.0",
+    "vite-plugin-style-import": "^2.0.0",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vite-plugin-vue-images": "^0.6.1",
+    "vite-plugin-vue-setup-extend-plus": "^0.1.0",
     "vite-plugin-windicss": "^1.8.4",
     "windicss": "^3.5.4"
   }

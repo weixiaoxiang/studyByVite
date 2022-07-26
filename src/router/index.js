@@ -27,6 +27,22 @@ const cesiumRoutes = [
     meta: {
       index: 1
     }
+  },
+  {
+    path: '/cesiumCatalog',
+    name: 'cesiumCatalog',
+    component: () => import('@pages/Cesium/cesiumCatalog.vue'),
+    meta: {
+      index: 1
+    }
+  },
+  {
+    path: '/threeCatalog',
+    name: 'threeCatalog',
+    component: () => import('@pages/Three/threeCatalog.vue'),
+    meta: {
+      index: 1
+    }
   }
 ]
 const threeRoutes = [

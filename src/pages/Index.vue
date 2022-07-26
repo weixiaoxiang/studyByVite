@@ -1,25 +1,20 @@
 <template>
-  <el-row>
-    <el-col :xs="12" :sm="13" :md="14" :lg="16" :xl="17" class="left">
-      <div ref="left"></div>
-    </el-col>
-    <el-col :xs="12" :sm="11" :md="10" :lg="8" :xl="7" class="right">
-      <el-form :rules="rules" ref="loginForm" :model="form" label-width="80px">
-        <el-form-item label="账号" prop="name">
-          <el-input v-model="form.name"></el-input>
-        </el-form-item>
-        <el-form-item label="密码" prop="password">
-          <el-input v-model="form.password"></el-input>
-        </el-form-item>
-        <el-form-item class="login-btn">
-          <el-button type="primary" @click="login">登录</el-button>
-          <el-button>取消</el-button>
-        </el-form-item>
-      </el-form>
-    </el-col>
-  </el-row>
+  <particles></particles>
+  <el-form :rules="rules" ref="loginForm" :model="form" label-width="80px" class="form">
+    <el-form-item label="账号" prop="name">
+      <el-input v-model="form.name"></el-input>
+    </el-form-item>
+    <el-form-item label="密码" prop="password">
+      <el-input v-model="form.password"></el-input>
+    </el-form-item>
+    <el-form-item class="login-btn">
+      <el-button style="margin-left: 90px" type="primary" @click="login">登录</el-button>
+    </el-form-item>
+  </el-form>
 </template>
 <script setup>
+//背景动画
+import Particles from '@/composables/particles/index.vue'
 import { storeToRefs } from 'pinia'
 import { useMainStore } from '@store/index.js'
 import * as THREE from 'three'
@@ -35,6 +30,7 @@ const form = reactive({ name: '', password: '' })
 let clock, mixer, stats, container, scene, camera, renderer, controls
 let left = ref()
 onMounted(() => {
+  return
   clock = new THREE.Clock()
   container = left.value
   stats = new Stats()
@@ -117,26 +113,20 @@ const login = () => {
 }
 </script>
 <style lang="scss" scoped>
-.left {
-  float: left;
-  width: 70vw;
-  height: 100vh;
-  div {
-    width: 100%;
-    height: 100%;
-  }
+* {
+  user-select: none;
 }
-.right {
-  float: right;
-  width: 30vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .login-btn {
-    &:deep(.el-form-item__content) {
-      justify-content: center;
-    }
-  }
+.el-form {
+  width: 400px;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px 3px rgba(27, 76, 223, 1);
+  filter: blur(1px);
+  z-index: 1;
 }
 </style>
